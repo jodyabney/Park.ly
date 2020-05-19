@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Park_ly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hYV-4q-UUa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="park.ly-logo" translatesAutoresizingMaskIntoConstraints="NO" id="qpq-RE-Hj6">
+                                <rect key="frame" x="20" y="64" width="374" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="tK2-9q-XgD"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y1f-Zh-xBC">
+                                <rect key="frame" x="111.5" y="767" width="191" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8n-wb-kyt" customClass="RoundButton" customModule="Park_ly" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="12.5" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="4bk-Lz-WXO"/>
+                                            <constraint firstAttribute="width" constant="50" id="m0I-fI-353"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="location" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetMapCenterWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XtT-3o-NM2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTI-tu-Khb" customClass="RoundButton" customModule="Park_ly" customModuleProvider="target">
+                                        <rect key="frame" x="58" y="0.0" width="75" height="75"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="meZ-yo-7Dt"/>
+                                            <constraint firstAttribute="width" constant="75" id="mup-zr-Nwe"/>
+                                        </constraints>
+                                        <state key="normal" image="parkCar"/>
+                                        <connections>
+                                            <action selector="parkButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cjb-kY-9x8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEd-6Q-yco" customClass="RoundButton" customModule="Park_ly" customModuleProvider="target">
+                                        <rect key="frame" x="141" y="12.5" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="1pa-4o-iiJ"/>
+                                            <constraint firstAttribute="width" constant="50" id="7lo-WQ-LPQ"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="car" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getDirectionsButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cA-4D-14C"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hYV-4q-UUa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="125-1r-CMc"/>
+                            <constraint firstItem="qpq-RE-Hj6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3Nh-YZ-dfM"/>
+                            <constraint firstItem="y1f-Zh-xBC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="66D-Hm-7fR"/>
+                            <constraint firstItem="hYV-4q-UUa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EFv-ui-51E"/>
+                            <constraint firstItem="hYV-4q-UUa" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="GnT-fj-DZ4"/>
+                            <constraint firstItem="hYV-4q-UUa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UEL-6q-OWl"/>
+                            <constraint firstItem="qpq-RE-Hj6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UbH-nB-CeC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y1f-Zh-xBC" secondAttribute="bottom" constant="20" id="mvs-RY-2iK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qpq-RE-Hj6" secondAttribute="trailing" constant="20" id="pUR-gL-p3F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="directionsButton" destination="fEd-6Q-yco" id="euI-Wp-auE"/>
+                        <outlet property="mapView" destination="hYV-4q-UUa" id="Jnh-aM-4ci"/>
+                        <outlet property="parkButton" destination="fTI-tu-Khb" id="HVP-bF-AZJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car" catalog="system" width="128" height="93"/>
+        <image name="location" catalog="system" width="128" height="115"/>
+        <image name="park.ly-logo" width="273" height="75"/>
+        <image name="parkCar" width="51" height="39"/>
+    </resources>
+</document>

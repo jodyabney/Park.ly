@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1207E992472D59D002BBB45 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1207E982472D59D002BBB45 /* LocationService.swift */; };
+		B1207E9B2472F8AC002BBB45 /* ParkingSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1207E9A2472F8AC002BBB45 /* ParkingSpot.swift */; };
 		B187B8622472C0C900B59385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B187B8612472C0C900B59385 /* AppDelegate.swift */; };
 		B187B8642472C0C900B59385 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B187B8632472C0C900B59385 /* SceneDelegate.swift */; };
 		B187B8662472C0C900B59385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B187B8652472C0C900B59385 /* ViewController.swift */; };
 		B187B8692472C0C900B59385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B187B8672472C0C900B59385 /* Main.storyboard */; };
 		B187B86B2472C0CA00B59385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B187B86A2472C0CA00B59385 /* Assets.xcassets */; };
 		B187B86E2472C0CA00B59385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B187B86C2472C0CA00B59385 /* LaunchScreen.storyboard */; };
+		B187B8792472C48200B59385 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B187B8782472C48200B59385 /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B1207E982472D59D002BBB45 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		B1207E9A2472F8AC002BBB45 /* ParkingSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingSpot.swift; sourceTree = "<group>"; };
 		B187B85E2472C0C900B59385 /* Park.ly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Park.ly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B187B8612472C0C900B59385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B187B8632472C0C900B59385 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		B187B86A2472C0CA00B59385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B187B86D2472C0CA00B59385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B187B86F2472C0CA00B59385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B187B8782472C48200B59385 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1207E972472D58C002BBB45 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B1207E982472D59D002BBB45 /* LocationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B187B8552472C0C900B59385 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +70,42 @@
 		B187B8602472C0C900B59385 /* Park.ly */ = {
 			isa = PBXGroup;
 			children = (
+				B1207E972472D58C002BBB45 /* Services */,
 				B187B8612472C0C900B59385 /* AppDelegate.swift */,
 				B187B8632472C0C900B59385 /* SceneDelegate.swift */,
-				B187B8652472C0C900B59385 /* ViewController.swift */,
-				B187B8672472C0C900B59385 /* Main.storyboard */,
+				B187B8772472C43600B59385 /* Model */,
+				B187B8762472C42E00B59385 /* View */,
+				B187B8752472C42500B59385 /* Controller */,
 				B187B86A2472C0CA00B59385 /* Assets.xcassets */,
-				B187B86C2472C0CA00B59385 /* LaunchScreen.storyboard */,
 				B187B86F2472C0CA00B59385 /* Info.plist */,
 			);
 			path = Park.ly;
+			sourceTree = "<group>";
+		};
+		B187B8752472C42500B59385 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B187B8652472C0C900B59385 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B187B8762472C42E00B59385 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B187B8672472C0C900B59385 /* Main.storyboard */,
+				B187B86C2472C0CA00B59385 /* LaunchScreen.storyboard */,
+				B187B8782472C48200B59385 /* RoundButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B187B8772472C43600B59385 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1207E9A2472F8AC002BBB45 /* ParkingSpot.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B187B8792472C48200B59385 /* RoundButton.swift in Sources */,
 				B187B8662472C0C900B59385 /* ViewController.swift in Sources */,
+				B1207E9B2472F8AC002BBB45 /* ParkingSpot.swift in Sources */,
+				B1207E992472D59D002BBB45 /* LocationService.swift in Sources */,
 				B187B8622472C0C900B59385 /* AppDelegate.swift in Sources */,
 				B187B8642472C0C900B59385 /* SceneDelegate.swift in Sources */,
 			);
